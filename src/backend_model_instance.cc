@@ -85,9 +85,8 @@ BackendModelInstance::BackendModelInstance(
     case TRITONSERVER_INSTANCEGROUPKIND_XPU: {
       LOG_MESSAGE(
           TRITONSERVER_LOG_VERBOSE,
-          (std::string("Creating instance ") + name_ + " on XPU " +
-           std::to_string(device_id_) + " (" + cc + ") using artifact '" +
-           artifact_filename_ + "'")
+          (std::string("Creating instance ") + name_ +
+           " on XPU using artifact '" + artifact_filename_ + "'")
               .c_str());
       break;
     }
